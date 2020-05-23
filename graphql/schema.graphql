@@ -18,5 +18,10 @@ type MovieDetail {
 
 type Query {
 	nowPlaying: [Movie!]!
+	topRated: [Movie!]!
 	detailMovie(id: Int!): MovieDetail!
+	popular: [Movie!]!
+	similar(id: Int!): [Movie!]!
+	searchMovies(title: String!): [Movie!]!
+	upComing: [Movie!]!
 }

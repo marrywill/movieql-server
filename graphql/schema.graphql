@@ -1,0 +1,22 @@
+type Genre {
+	id: Int!
+	name: String!
+}
+
+type Movie {
+	id: Int!
+	title: String!
+	vote_average: Float!
+}
+type MovieDetail {
+	id: Int!
+	title: String!
+	overview: String!
+	vote_average: Float!
+	genres: [Genre!]
+}
+
+type Query {
+	nowPlaying: [Movie!]!
+	detailMovie(id: Int!): MovieDetail!
+}
